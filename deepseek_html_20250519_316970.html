@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Editable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr); /* 7 columnas (como semana) */
+      gap: 10px;
+    }
+    .event-cell {
+      border: 1px solid #ddd;
+      padding: 10px;
+      min-height: 80px;
+      background: #f9f9f9;
+      cursor: pointer;
+    }
+    .event-title {
+      font-weight: bold;
+    }
+    #edit-form {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calendario de Google (Editable)</h1>
+  <div class="calendar-grid" id="calendarGrid"></div>
+
+  <!-- Formulario para editar -->
+  <div id="edit-form">
+    <input type="text" id="edit-title" placeholder="Nuevo título">
+    <button id="save-btn">Guardar</button>
+    <button id="cancel-btn">Cancelar</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

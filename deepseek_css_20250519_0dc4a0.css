@@ -1,0 +1,12 @@
+.event-cell {
+  position: relative; /* Para posicionar el input */
+}
+
+.edit-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #4CAF50; /* Borde verde */
+  border-radius: 4px;
+  font-size: inherit;
+  font-family: inherit;
+}
